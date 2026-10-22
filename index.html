@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PROYECTA-IA: asistente para Referencias bibliográficas, Glosario, Apéndices y Anexos del Proyecto de Grado de Ingeniería Electrónica.">
+  <title>PROYECTA-IA | Parte final · Referencias, Glosario, Apéndices y Anexos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="access-locked">
+  <div id="accessGate" class="access-gate">
+    <div class="access-card">
+      <div class="access-logo">P</div>
+      <h2>Acceso a PROYECTA-IA</h2>
+      <p class="access-subtitle">Parte final · Referencias, Glosario, Apéndices y Anexos</p>
+      <p>Ingresa tu número de Carnet de Identidad autorizado.</p>
+      <label for="ciAccess">Número de C.I.</label>
+      <input id="ciAccess" type="password" inputmode="numeric" autocomplete="off" placeholder="Solo números">
+      <button id="accessBtn" class="primary access-button" type="button">Ingresar</button>
+      <p id="accessMessage" class="access-message" aria-live="polite"></p>
+      <p class="access-privacy">El acceso se valida mediante la base central de PROYECTA-IA.</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <h1>PROYECTA-IA</h1>
+          <p>Parte final · Referencias bibliográficas, Glosario, Apéndices y Anexos</p>
+          <p class="author">Realizado por: Luis Cabezas Tito, Ph. D.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="badge">TRAZABILIDAD · APA 6 · DOCUMENTACIÓN · RESPALDO</div>
+        <button id="logoutBtn" class="logout-btn hidden" type="button">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero final-hero">
+      <span class="eyebrow">CIERRE DOCUMENTAL DEL PROYECTO DE GRADO</span>
+      <h2>REFERENCIAS BIBLIOGRÁFICAS, GLOSARIO, APÉNDICES Y ANEXOS: <span>la evidencia documental que completa el proyecto</span></h2>
+      <p>Estas secciones no constituyen un capítulo numerado, pero son parte obligatoria del documento final. Permiten rastrear las fuentes utilizadas, comprender términos técnicos y organizar la documentación complementaria propia y externa.</p>
+      <div class="closure-flow final-flow">
+        <article><b>1. Referencias</b><span>Todo lo citado debe aparecer aquí.</span></article>
+        <article><b>2. Glosario</b><span>Solo términos realmente usados.</span></article>
+        <article><b>3. Apéndices</b><span>Producción propia del estudiante.</span></article>
+        <article><b>4. Anexos</b><span>Documentación proveniente de terceros.</span></article>
+      </div>
+      <div class="stop-c6"><strong>Regla de trazabilidad:</strong> ninguna referencia debe quedar sin cita en el texto y ninguna cita debe quedar sin su referencia bibliográfica correspondiente.</div>
+    </section>
+
+    <nav class="section-nav">
+      <a href="#conceptos">Conceptos</a><a href="#referencias">Referencias</a><a href="#word">Word</a><a href="#apa">Modelos APA 6</a>
+      <a href="#glosario">Glosario</a><a href="#apendices">Apéndices</a><a href="#anexos">Anexos</a><a href="#clasificador">Clasificador</a>
+      <a href="#revision">Revisión integral</a><a href="#prompt">Prompt experto</a>
+    </nav>
+
+    <section id="conceptos" class="card">
+      <span class="section-number">1</span>
+      <h3>¿QUÉ SIGNIFICA CADA PARTE?</h3>
+      <div class="definition-grid four-grid">
+        <article class="definition-card"><h4>Referencias bibliográficas</h4><p>Relación de las fuentes que fueron citadas efectivamente en el proyecto. Reconocen autoría, permiten localizar las fuentes y demuestran el sustento académico, técnico y normativo del trabajo.</p></article>
+        <article class="definition-card"><h4>Glosario</h4><p>Lista alfabética de términos técnicos, siglas y expresiones especializadas usadas realmente en el proyecto. Debe aclarar, no reemplazar el Marco Teórico.</p></article>
+        <article class="definition-card"><h4>Apéndices</h4><p>Material complementario elaborado por el propio estudiante: códigos, algoritmos, diagramas propios, cuestionarios, matrices, cálculos extensos, registros de medición o manuales.</p></article>
+        <article class="definition-card"><h4>Anexos</h4><p>Documentación externa elaborada por terceros: datasheets, cartas, permisos, normas, cotizaciones, fichas de fabricante, mapas oficiales o extractos de manuales.</p></article>
+      </div>
+      <div class="rule-c6"><b>Orden recomendado:</b> REFERENCIAS BIBLIOGRÁFICAS → GLOSARIO → APÉNDICES → ANEXOS.</div>
+      <div class="warning-c6"><b>No acumules material por volumen.</b> Cada elemento debe tener una función dentro del proyecto y, cuando corresponda, ser llamado desde el cuerpo principal.</div>
+    </section>
+
+    <section id="referencias" class="card">
+      <span class="section-number">2</span>
+      <h3>REFERENCIAS BIBLIOGRÁFICAS — CONTROL DE CORRESPONDENCIA</h3>
+      <p>En APA 6, la lista se presenta en orden alfabético por el primer autor, sin numeración y con sangría francesa. En este proyecto institucional se prioriza la correspondencia exacta entre las citas insertadas y las referencias finales.</p>
+      <div class="input-grid">
+        <div class="context-card">
+          <h4>Citas utilizadas en el documento</h4>
+          <p class="small-note">Puedes pegar una lista como: <i>(García, 2022)</i>, <i>García (2022)</i>, <i>(IEEE, 2021)</i>. Una cita por línea facilita la revisión.</p>
+          <textarea id="citationsText" rows="12" placeholder="(García, 2022)\n(IEEE, 2021)\nMamani y Rojas (2024)"></textarea>
+        </div>
+        <div class="context-card">
+          <h4>Lista final de referencias</h4>
+          <div class="upload-panel"><input type="file" data-target="referencesText" accept=".docx,.pdf,.txt"><div class="file-status" data-status="referencesText"></div></div>
+          <textarea id="referencesText" rows="12" placeholder="Pega aquí la bibliografía o referencias completas, una referencia por párrafo o línea."></textarea>
+        </div>
+      </div>
+      <div class="actions"><button id="reviewRefsBtn" class="primary blue-c6" type="button">Revisar citas ↔ referencias</button><button id="clearRefsBtn" type="button">Limpiar</button></div>
+      <div id="refsOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="word" class="card">
+      <span class="section-number">3</span>
+      <h3>¿CÓMO OBTENER LAS REFERENCIAS DESDE MICROSOFT WORD?</h3>
+      <div class="word-steps">
+        <article><b>1</b><span>Abrir <strong>Referencias</strong> en la cinta de Word.</span></article>
+        <article><b>2</b><span>Elegir el estilo <strong>APA</strong>. Si Word permite seleccionar edición, usar APA 6; si no, revisar manualmente el resultado.</span></article>
+        <article><b>3</b><span>Seleccionar <strong>Insertar cita → Agregar nueva fuente</strong>.</span></article>
+        <article><b>4</b><span>Escoger el tipo de fuente: libro, artículo, sitio web, tesis, informe, conferencia, norma u otro.</span></article>
+        <article><b>5</b><span>Completar autor, año, título, editorial, ciudad, volumen, número, páginas, DOI o URL según corresponda.</span></article>
+        <article><b>6</b><span>Insertar cada cita en el punto exacto donde se utiliza la información.</span></article>
+        <article><b>7</b><span>Al final del proyecto: <strong>Bibliografía → Insertar bibliografía</strong>.</span></article>
+        <article><b>8</b><span>Revisar manualmente orden alfabético, sangría francesa, datos incompletos, duplicados y correspondencia con las citas.</span></article>
+      </div>
+      <div class="links-row">
+        <a class="tool-link" href="https://luisctito-sketch.github.io/proyecta-ia-apa6/" target="_blank" rel="noopener">Abrir PROYECTA-IA · APA 6</a>
+        <a class="tool-link" href="https://luisctito-sketch.github.io/proyecta-ia-apa6-word/" target="_blank" rel="noopener">Abrir PROYECTA-IA · APA 6 con Word</a>
+      </div>
+      <div class="warning-c6"><b>Word no reemplaza la revisión.</b> El administrador de fuentes automatiza el proceso, pero un dato mal ingresado produce una referencia incorrecta.</div>
+    </section>
+
+    <section id="apa" class="card">
+      <span class="section-number">4</span>
+      <h3>MODELOS BÁSICOS DE REFERENCIAS — APA 6</h3>
+      <div class="apa-grid">
+        <article><h4>Libro</h4><p>Apellido, A. A. (Año). <i>Título del libro</i>. Ciudad, País: Editorial.</p></article>
+        <article><h4>Artículo científico</h4><p>Apellido, A. A., &amp; Apellido, B. B. (Año). Título del artículo. <i>Nombre de la Revista, volumen</i>(número), pp–pp.</p></article>
+        <article><h4>Página web</h4><p>Autor o institución. (Año). <i>Título del recurso</i>. Recuperado de URL.</p></article>
+        <article><h4>Tesis / proyecto de grado</h4><p>Apellido, A. A. (Año). <i>Título del trabajo</i> (Tesis de licenciatura/Proyecto de grado). Institución, Ciudad, País.</p></article>
+        <article><h4>Norma</h4><p>Institución. (Año). <i>Código y título de la norma</i>. Lugar: Autor.</p></article>
+      </div>
+
+      <h4 class="subhead">Generador didáctico de una referencia</h4>
+      <p>Este generador sirve como guía básica. Para casos especiales, usa el chatbot APA 6.</p>
+      <div class="ref-builder">
+        <label>Tipo de fuente<select id="refType"><option value="book">Libro</option><option value="article">Artículo</option><option value="web">Página web</option><option value="thesis">Tesis / Proyecto</option><option value="standard">Norma</option></select></label>
+        <label>Autor / Institución<input id="refAuthor" placeholder="Pérez, J. A. / IEEE"></label>
+        <label>Año<input id="refYear" placeholder="2025"></label>
+        <label>Título<input id="refTitle" placeholder="Título completo"></label>
+        <label id="refExtraLabel">Editorial / Revista / Institución<input id="refExtra" placeholder="Editorial Técnica / Revista... / UPEA"></label>
+        <label>Ciudad / volumen / datos complementarios<input id="refPlace" placeholder="La Paz, Bolivia / 12(3), 45–58"></label>
+        <label>URL o DOI (si corresponde)<input id="refUrl" placeholder="https://... / doi:..."></label>
+      </div>
+      <div class="actions"><button id="buildRefBtn" class="primary blue-c6" type="button">Crear modelo</button></div>
+      <div id="refBuilderOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="glosario" class="card">
+      <span class="section-number">5</span>
+      <h3>GLOSARIO — TÉRMINOS TÉCNICOS QUE REALMENTE APARECEN EN EL PROYECTO</h3>
+      <p>El glosario debe ser alfabético, breve y específico del trabajo. No conviene incluir palabras de uso común ni transformar esta sección en un diccionario.</p>
+      <div class="context-card">
+        <div class="upload-panel"><input type="file" data-target="glossaryText" accept=".docx,.pdf,.txt"><div class="file-status" data-status="glossaryText"></div></div>
+        <textarea id="glossaryText" rows="14" placeholder="ADC: Conversor analógico-digital...\nCalibración: Proceso de comparación...\nIoT: Internet de las Cosas..."></textarea>
+      </div>
+      <div class="actions"><button id="reviewGlossaryBtn" class="primary blue-c6" type="button">Revisar glosario</button></div>
+      <div id="glossaryOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="apendices" class="card">
+      <span class="section-number">6</span>
+      <h3>APÉNDICES — MATERIAL ELABORADO POR EL ESTUDIANTE</h3>
+      <div class="example-grid">
+        <article><h4>APÉNDICE A. Diagrama funcional propio</h4><p>Arquitectura, diagrama de bloques o esquema diseñado específicamente para el proyecto.</p></article>
+        <article><h4>APÉNDICE B. Algoritmo o código fuente</h4><p>Código completo, pseudocódigo, flujograma extenso o rutinas desarrolladas por el estudiante.</p></article>
+        <article><h4>APÉNDICE C. Matriz de validación</h4><p>Matriz, instrumento, encuesta, protocolo o tabla construida para las pruebas y validaciones.</p></article>
+        <article><h4>APÉNDICE D. Registro de mediciones</h4><p>Tablas extensas de datos, cálculos detallados, curvas de calibración o registros propios.</p></article>
+      </div>
+      <div class="rule-c6"><b>Organización:</b> cada apéndice debe iniciar en página nueva, identificarse como APÉNDICE A, B, C… y llevar un título descriptivo. Debe ser mencionado desde el cuerpo del proyecto cuando sea pertinente.</div>
+    </section>
+
+    <section id="anexos" class="card">
+      <span class="section-number">7</span>
+      <h3>ANEXOS — DOCUMENTOS PROVENIENTES DE TERCEROS</h3>
+      <div class="example-grid">
+        <article><h4>ANEXO A. Hoja de datos</h4><p>Datasheet de un sensor, microcontrolador, módulo RF, equipo biomédico o dispositivo comercial.</p></article>
+        <article><h4>ANEXO B. Cotización</h4><p>Documento emitido por proveedor para respaldar costos del proyecto.</p></article>
+        <article><h4>ANEXO C. Carta o autorización</h4><p>Permiso institucional, certificado, carta de aceptación o documento emitido por una organización.</p></article>
+        <article><h4>ANEXO D. Norma o documento oficial</h4><p>Extracto de norma, ficha técnica, mapa oficial, estadística institucional o manual externo pertinente.</p></article>
+      </div>
+      <div class="warning-c6"><b>Diferencia decisiva:</b> si el estudiante lo diseñó, calculó, programó o produjo específicamente para el proyecto, es APÉNDICE. Si fue emitido o elaborado por un tercero, es ANEXO.</div>
+    </section>
+
+    <section id="clasificador" class="card">
+      <span class="section-number">8</span>
+      <h3>CLASIFICADOR: ¿APÉNDICE O ANEXO?</h3>
+      <label for="materialDescription">Describe el material</label>
+      <textarea id="materialDescription" rows="5" placeholder="Ej.: código completo del ESP32 desarrollado para el prototipo / hoja de datos del fabricante del sensor..."></textarea>
+      <label for="materialOrigin">¿Quién elaboró originalmente ese material?</label>
+      <select id="materialOrigin"><option value="own">El estudiante / investigador</option><option value="third">Fabricante, institución, proveedor u otro tercero</option><option value="unknown">No estoy seguro</option></select>
+      <div class="actions"><button id="classifyMaterialBtn" class="primary blue-c6" type="button">Clasificar material</button></div>
+      <div id="classifyOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="revision" class="card">
+      <span class="section-number">9</span>
+      <h3>REVISIÓN INTEGRAL DE LA PARTE FINAL</h3>
+      <p>Pega un inventario de tus apéndices y anexos para que el sistema revise orden, rotulación y coherencia básica.</p>
+      <div class="input-grid">
+        <div class="context-card"><h4>Inventario de apéndices</h4><textarea id="appendixInventory" rows="10" placeholder="APÉNDICE A. ...\nAPÉNDICE B. ..."></textarea></div>
+        <div class="context-card"><h4>Inventario de anexos</h4><textarea id="annexInventory" rows="10" placeholder="ANEXO A. ...\nANEXO B. ..."></textarea></div>
+      </div>
+      <div class="actions"><button id="integralReviewBtn" class="primary blue-c6" type="button">Emitir dictamen integral</button></div>
+      <div id="integralOutput" class="output-box hidden"></div>
+    </section>
+
+    <section id="prompt" class="card">
+      <span class="section-number">10</span>
+      <h3>PROMPT EXPERTO PARA REVISIÓN CON IA</h3>
+      <p>Después de llenar tus datos, copia este prompt y úsalo en ChatGPT para una revisión semántica más profunda. El chatbot no debe inventar referencias ni documentos externos.</p>
+      <div class="actions"><button id="copyPromptBtn" class="primary blue-c6" type="button">Copiar prompt experto</button><span id="promptStatus" class="copy-status"></span></div>
+      <div class="links-row">
+        <a class="tool-link" href="https://luisctito-sketch.github.io/proyecta-ia-figuras-tablas/" target="_blank" rel="noopener">Figuras, tablas y redacción científica</a>
+        <a class="tool-link" href="https://luisctito-sketch.github.io/proyecta-ia-apa6/" target="_blank" rel="noopener">Normas APA 6</a>
+      </div>
+    </section>
+
+    <section class="card final-check-card">
+      <h3>CRITERIO FINAL PARA EL ESTUDIANTE</h3>
+      <p>Antes de entregar el proyecto, se debe comprobar que las referencias coincidan con las citas, que el glosario contenga términos realmente utilizados, que los apéndices documenten producción propia y que los anexos aporten evidencia externa pertinente. Esta parte final no es un depósito de material sobrante: debe reforzar la trazabilidad y la verificabilidad del proyecto.</p>
+    </section>
+  </main>
+
+  <footer><div class="wrap">PROYECTA-IA · Apoyo metodológico para Ingeniería Electrónica · Luis Cabezas Tito, Ph. D.</div></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/mammoth@1.8.0/mammoth.browser.min.js"></script>
+  <script src="https://luisctito-sketch.github.io/proyecta-ia-acceso/access.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
